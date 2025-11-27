@@ -1,7 +1,10 @@
 services: 
-  mongodb:
-    image: mongodb:v1
-    container_name: mongodb
+  catalogue:
+    image: catalogue:v1
+    container_name: catalogue
+  # mongodb:
+  #   image: mongodb:v1
+  #   container_name: mongodb
 networks:
   default:
     driver: bridge
