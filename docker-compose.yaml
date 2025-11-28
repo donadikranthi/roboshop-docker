@@ -19,15 +19,11 @@ services:
     volumes:
     - redis:/data
   mysql:
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: RoboShop@1
-      MYSQL_DATABASE: roboshop
+    build: ./mysql
+    image: joindevops/mysql:v1
     container_name: mysql
-    restart: unless-stopped
-
-volumes:
-  mysql-data:
+    volumes:
+    - mysql:/var/lib/mysql
   rabbitmq:
     image: rabbitmq:3
     container_name: rabbitmq
