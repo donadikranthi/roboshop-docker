@@ -16,6 +16,7 @@ ENV MONGO="true" \
 RUN chown -R roboshop:roboshop /opt/server
 USER roboshop
 CMD ["node", "server.js"]
+ENTRYPOINT ["node"]
 
 
 
