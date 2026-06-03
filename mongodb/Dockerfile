@@ -1,5 +1,2 @@
-FROM mongo:7.0 -alpine3.21
-LABEL com.project="roboshop" \
-      component="mongodb" \
-      created_by="kranthi"
+FROM mongo:7.0 
 COPY *.js /docker-entrypoint-initdb.d
