@@ -6,7 +6,7 @@
 # RUN npm install 
 
 
-FROM n,ode:20.19.5-alpine3.21
+FROM node:20.19.5-alpine3.21
 # Create a group and user
 WORKDIR /opt/server
 RUN addgroup -S roboshop && adduser -S roboshop -G roboshop && \
